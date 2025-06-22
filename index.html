@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Datang</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding-top: 15%;
+    }
+    .popup {
+      background-color: #1f1f1f;
+      padding: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
+      animation: popUp 0.8s ease;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    .btn {
+      margin: 20px 10px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #00ffaa, #00bbaa);
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.7);
+    }
+    @keyframes popUp {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="popup">
+    <h1>Selamat datang di level 3</h1>
+    <p>Di tantangan ini, kami mencari orang cerdas yang dapat menyelesaikan 50 level KaynzProjects.</p>
+    <button class="btn" onclick="window.location.href='soal1.html'">Lanjut</button>
+    <button class="btn" onclick="window.close()">Keluar</button>
+  </div>
+</body>
+</html>

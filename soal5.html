@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 3 - Soal 5</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      text-align: center;
+      padding: 50px;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    }
+    .option {
+      background-color: #00ffaa;
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .option:hover {
+      transform: scale(1.1);
+    }
+    .hidden {
+      display: none;
+    }
+    .next-btn {
+      margin-top: 30px;
+      background: linear-gradient(45deg, #00ffaa, #00bbaa);
+      color: #000;
+      padding: 12px 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,255,170,0.5);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .next-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,255,170,0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Level 3 - Soal 5</h2>
+    <p><b>Pertanyaan:</b> Gambar dengan pola 4 bentuk, bentuk ke-5 yang hilang apa? (Pola: 🔺🔵🟩🔺🔵...?)</p>
+  <button class="option" onclick="cekJawaban('A')">A. "🟩"</button>
+  <button class="option" onclick="cekJawaban('B')">B. "🔵"</button>
+  <button class="option" onclick="cekJawaban('C')">C. "🔺"</button>
+</div>
+
+<div id="feedback" style="margin-top: 20px;"></div>
+
+<a href="selesai.html" id="nextLink" class="hidden">
+  <button class="next-btn"> Selesai</button>
+</a> 
+
+  </div>  <script>
+    function cekJawaban(jawaban) {
+      const feedback = document.getElementById("feedback");
+      const nextLink = document.getElementById("nextLink");
+
+      if (jawaban === "A") {
+        feedback.innerHTML = "✅ Jawaban benar! Gw kasih gampang lagi wlee";
+        nextLink.classList.remove("hidden");
+      } else {
+        feedback.innerHTML = "❌ Salah, coba lagi.";
+        nextLink.classList.add("hidden");
+      }
+    }
+  </script></body>
+</html>

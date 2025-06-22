@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 3 – Soal 2</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    }
+
+    input, button {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #00ffaa;
+      color: black;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 12px rgba(0,255,170,0.6);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #feedback {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2> Level 3 – Soal 2</h2>
+    <p>Kata "MALAM" dibaca dari belakang tetap?</p>
+    
+    <input type="text" id="jawaban" placeholder="Jawaban kamu...">
+    <br>
+    <button class="btn" onclick="cekJawaban()">Submit</button>
+    
+    <p id="feedback"></p>
+    
+    <a href="soal3.html">
+      <button id="lanjutBtn" class="btn hidden">Lanjut ke Soal 3</button>
+    </a>
+  </div>
+
+  <script>
+    function cekJawaban() {
+      const input = document.getElementById("jawaban").value.trim();
+      const feedback = document.getElementById("feedback");
+      const lanjutBtn = document.getElementById("lanjutBtn");
+
+      if (input === "Malam" || input === "malam" || input === "MALAM" || input === "tetap" || input == "iya") {
+        feedback.textContent = "✅ Jawaban Benar!";
+        lanjutBtn.classList.remove("hidden");
+      } else {
+        feedback.textContent = "❌ Masih salah, coba lagi.";
+        lanjutBtn.classList.add("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
